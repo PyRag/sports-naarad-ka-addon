@@ -1,0 +1,70 @@
+html{
+
+   height:100%;
+}
+
+body{
+
+   height:100%;
+   background-attachment:fixed;
+   background-color:white;
+   background-position:center;
+   background-repeat:no-repeat;
+}
+
+.navi{
+
+   background-color: #0D47A1;
+   color:white;
+   font-size:1.4em;
+
+
+}
+
+.navbar-header{
+
+   margin-top:9px;
+
+}
+
+.sports-icon{
+
+   width:90px;
+   height:90px;
+
+}
+
+.cricket{
+
+    margin-top:50px;
+
+}
+
+.football{
+
+   margin-top:30px;
+}
+
+.links{
+
+   margin-right:15px;
+
+}
+
+a{
+   text-decoration:none;
+}
+
+.header{
+
+   margin-top:50px;
+   padding-top:10px;
+   background-color:#1976D2;
+   color:white;
+   height:40px;
+
+}
+
+#github-link{
+   color:black;
+}
