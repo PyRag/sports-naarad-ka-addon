@@ -6,9 +6,7 @@ var button = ToggleButton({ //The button shown in firefox toolbar
   id: "my-button",
   label: "my button",
   icon: {
-    "16": "./icon-16.png",
-    "32": "./icon-32.png",
-    "64": "./icon-64.png"
+    "16": "./addon.png"
   },
   onChange: handleChange
 });
