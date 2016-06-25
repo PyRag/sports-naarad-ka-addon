@@ -1,0 +1,16 @@
+{
+  "title": "sports-naarad",
+  "name": "sports-naarad",
+  "version": "0.0.1",
+  "description": "An addon for daily cricket/football doses",
+  "main": "index.js",
+  "author": "Mayank Pratap Singh",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
