@@ -1,0 +1,19 @@
+html{
+
+   height:100%;
+}
+
+body{
+
+   height:100%;
+   background-attachment:fixed;
+   background-color:white;
+   background-position:center;
+   background-repeat:no-repeat;
+}
+
+.light{
+
+   color:#666A69;
+
+}
