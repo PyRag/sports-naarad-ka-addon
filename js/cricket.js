@@ -6,15 +6,15 @@
        $('.container').empty();
        req=new XMLHttpRequest();
        req.open("GET",'https://cherry-shortcake-81993.herokuapp.com/cric/news/',true);
-       console.log("Hello");
+       //console.log("Hello");
        req.send();
        req.onload = function(){
           json = JSON.parse(req.responseText);
           json=json.result;
           //putdata(res);
           for(var key in json){
-             console.log(key);
-             console.log(json[key]);
+             //console.log(key);
+             //console.log(json[key]);
              var headlines=key;
              var link=json[key];
              //link=link.substr(4);  // Taking out www out of URL.
@@ -59,8 +59,8 @@
            json=json.result;
            //putdata(res);
            for(var key in json){
-               console.log(key);
-               console.log(json[key]);
+               //console.log(key);
+               //console.log(json[key]);
                var series=key;
                var matches=json[key];
 
