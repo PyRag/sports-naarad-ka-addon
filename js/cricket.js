@@ -24,9 +24,7 @@
              $('.container').append(html);
           }
        };
-       req.onerror = function(){
-          console.log("gadbad");
-       }
+       
 
     }
 
@@ -85,14 +83,7 @@
 
            }
 
-
-
        };
-
-       req.onerror = function(){
-          console.log("gadbad");
-       }
-
    }
 
    function getLive(){
@@ -159,10 +150,6 @@
        $('.container').append(html);
 
      }
-
-      req.onerror = function(){
-         console.log("gadbad");
-      }
 
    }
 
