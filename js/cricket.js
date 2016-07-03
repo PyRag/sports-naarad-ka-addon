@@ -1,7 +1,5 @@
  $(document).ready(function(){
-    /***** Counter Measures Ready , Although I am not sure Reviewers At Mozilla will be satisfied ***/
-    function escapeHTML(str) str.replace(/[&"<>]/g, function (m) ({ "&": "&amp;", '"': "&quot;", "<": "&lt;", ">": "&gt;" })[m]);
-    /******* If rejected I will again try  ******************************/
+
     getLive();
     function getNews(){
        $('.container').empty();
@@ -21,7 +19,7 @@
              //link=link.substr(4);  // Taking out www out of URL.
              //link="m."+link;       // Taking links to mobile website of cric buzz
              link="http://"+link;  // Adding http:// infront of url to avoid opening in localhost
-             var html="<div class='well'>"+"<a href="+escapeHTML(link)+" target='_blank'><strong>"+escapeHTML(headlines)+"</strong></a>";
+             var html="<div class='well'>"+"<a href="+DOMPurify.sanitize(link,{SAFE_FOR_JQUERY: true})+" target='_blank'><strong>"+DOMPurify.sanitize(headlines,{SAFE_FOR_JQUERY: true})+"</strong></a>";
              $('.container').append(html);
           }
        };
@@ -63,7 +61,7 @@
                var series=key;
                var matches=json[key];
 
-               var html="<div class='well'><p class='text-success'><strong>"+escapeHTML(series)+"</strong></p><br><br>";
+               var html="<div class='well'><p class='text-success'><strong>"+DOMPurify.sanitize(series,{SAFE_FOR_JQUERY: true})+"</strong></p><br><br>";
 
                for(var i=0;i<matches.length;++i){
 
@@ -73,10 +71,10 @@
                   var venue=match[2];
                   var status=match[3];
                   html+="<div class='well'>";
-                  html+="<p class='text-info'>"+escapeHTML(versus)+"</p>";
-                  html+="<p class='text-info'>"+escapeHTML(date)+"</p>";
-                  html+="<p class='text-info'>"+escapeHTML(venue)+"</p>";
-                  html+="<p class='text-info'>"+escapeHTML(status)+"</p>";
+                  html+="<p class='text-info'>"+DOMPurify.sanitize(versus,{SAFE_FOR_JQUERY: true})+"</p>";
+                  html+="<p class='text-info'>"+DOMPurify.sanitize(date,{SAFE_FOR_JQUERY: true})+"</p>";
+                  html+="<p class='text-info'>"+DOMPurify.sanitize(venue,{SAFE_FOR_JQUERY: true})+"</p>";
+                  html+="<p class='text-info'>"+DOMPurify.sanitize(status,{SAFE_FOR_JQUERY: true})+"</p>";
                   html+="</div>";
                }
 
@@ -137,13 +135,13 @@
          var name=info["name_of_the_match_in_the_series"];
 
 
-         html+="<div class='well'><strong>"+escapeHTML(headline)+"<strong><br>";
-         html+="<div class='light'>"+escapeHTML(title)+"</div>";
-         html+="<div class='light'>"+escapeHTML(name)+"</div>";
-         html+="<div class='light'>"+escapeHTML(status)+"</div>";
-         html+="<div class='light'>"+escapeHTML(score)+"</div>";
-         html+="<div class='light'>"+escapeHTML(time)+"</div>";
-         html+="<div class='light'>"+escapeHTML(venue)+"</div>"
+         html+="<div class='well'><strong>"+DOMPurify.sanitize(headline,{SAFE_FOR_JQUERY: true})+"<strong><br>";
+         html+="<div class='light'>"+DOMPurify.sanitize(title,{SAFE_FOR_JQUERY: true})+"</div>";
+         html+="<div class='light'>"+DOMPurify.sanitize(name,{SAFE_FOR_JQUERY: true})+"</div>";
+         html+="<div class='light'>"+DOMPurify.sanitize(status,{SAFE_FOR_JQUERY: true})+"</div>";
+         html+="<div class='light'>"+DOMPurify.sanitize(score,{SAFE_FOR_JQUERY: true})+"</div>";
+         html+="<div class='light'>"+DOMPurify.sanitize(venue,{SAFE_FOR_JQUERY: true})+"</div>"
+         html+="<div class='light'>"+DOMPurify.sanitize(time,{SAFE_FOR_JQUERY: true})+"</div>";
          html+="</div>";
 
        }
